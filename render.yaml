@@ -2,7 +2,7 @@ services:
   - type: web
     name: my-n8n
     env: docker
-    region: oregon # 或 singapore, frankfurt 等
+    region: singapore # 或 singapore, frankfurt 等
     plan: free
     dockerfilePath: ./Dockerfile
     envVars:
