@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: my-n8n
+    env: docker
+    region: oregon # 或 singapore, frankfurt 等
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: your_username
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: your_secure_password
+      - key: WEBHOOK_TUNNEL_URL
+        value: https://toptainn8n.onrender.com  # 替换为你的实际域名
+      - key: GENERIC_TIMEZONE
+        value: Asia/Shanghai
